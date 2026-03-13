@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Overedge Connector
- * Plugin URI:  https://overedge.dev
+ * Plugin URI:  https://overedge.dev/connector
  * Description: Connects your WordPress site to a Lovable-built React frontend as a headless CMS.
  * Version:     1.0.0
  * Author:      Overedge
