@@ -7,7 +7,7 @@
  * Author:      Overedge
  * Author URI:  https://overedge.dev
  * License:     GPL v2 or later
- * Text Domain: overedge
+ * Text Domain: overedge-connector
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

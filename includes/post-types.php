@@ -8,10 +8,10 @@ function overedge_register_post_types() {
     // Testimonials
     register_post_type( 'testimonials', array(
         'labels' => array(
-            'name'          => __( 'Testimonials', 'overedge' ),
-            'singular_name' => __( 'Testimonial', 'overedge' ),
-            'add_new_item'  => __( 'Add New Testimonial', 'overedge' ),
-            'edit_item'     => __( 'Edit Testimonial', 'overedge' ),
+            'name'          => __( 'Testimonials', 'overedge-connector' ),
+            'singular_name' => __( 'Testimonial', 'overedge-connector' ),
+            'add_new_item'  => __( 'Add New Testimonial', 'overedge-connector' ),
+            'edit_item'     => __( 'Edit Testimonial', 'overedge-connector' ),
         ),
         'public'       => true,
         'show_in_rest' => true,
@@ -23,10 +23,10 @@ function overedge_register_post_types() {
     // Team Members
     register_post_type( 'team_members', array(
         'labels' => array(
-            'name'          => __( 'Team Members', 'overedge' ),
-            'singular_name' => __( 'Team Member', 'overedge' ),
-            'add_new_item'  => __( 'Add New Team Member', 'overedge' ),
-            'edit_item'     => __( 'Edit Team Member', 'overedge' ),
+            'name'          => __( 'Team Members', 'overedge-connector' ),
+            'singular_name' => __( 'Team Member', 'overedge-connector' ),
+            'add_new_item'  => __( 'Add New Team Member', 'overedge-connector' ),
+            'edit_item'     => __( 'Edit Team Member', 'overedge-connector' ),
         ),
         'public'       => true,
         'show_in_rest' => true,
@@ -38,10 +38,10 @@ function overedge_register_post_types() {
     // FAQs
     register_post_type( 'faqs', array(
         'labels' => array(
-            'name'          => __( 'FAQs', 'overedge' ),
-            'singular_name' => __( 'FAQ', 'overedge' ),
-            'add_new_item'  => __( 'Add New FAQ', 'overedge' ),
-            'edit_item'     => __( 'Edit FAQ', 'overedge' ),
+            'name'          => __( 'FAQs', 'overedge-connector' ),
+            'singular_name' => __( 'FAQ', 'overedge-connector' ),
+            'add_new_item'  => __( 'Add New FAQ', 'overedge-connector' ),
+            'edit_item'     => __( 'Edit FAQ', 'overedge-connector' ),
         ),
         'public'       => true,
         'show_in_rest' => true,

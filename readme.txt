@@ -1,6 +1,6 @@
 === Overedge Connector ===
 Contributors: overedge
-Tags: headless, rest-api, react, cms, lovable, vite, javascript, decoupled
+Tags: headless, rest-api, react, lovable, vite
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
