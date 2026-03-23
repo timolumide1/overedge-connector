@@ -1,5 +1,5 @@
 === Overedge Connector ===
-Contributors: overedge
+Contributors: timothyolu
 Tags: headless, rest-api, react, lovable, vite
 Requires at least: 5.8
 Tested up to: 6.9
@@ -143,7 +143,7 @@ Single site support only in version 1.0. Multisite support is planned for a futu
 
 = How do I report a bug or request a feature? =
 
-Visit overedge.dev or open an issue at github.com/overedge/overedge-connector
+Visit overedge.dev or open an issue at https://github.com/timolumide1/overedge-connector
 
 == Screenshots ==
 
