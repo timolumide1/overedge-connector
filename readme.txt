@@ -183,7 +183,7 @@ Visit overedge.dev or open an issue at https://github.com/timolumide1/overedge-c
 == Upgrade Notice ==
 
 = 1.0.1 =
-After updating, visit **Settings → Permalinks** and save once. REST collections stay at `wp/v2/testimonials`, `wp/v2/team_members`, and `wp/v2/faqs` (post types are `overedge_testimonials`, `overedge_team_members`, `overedge_faqs` internally). Options and secret keys migrate automatically on activation.
+After updating, go to Settings → Permalinks and save once to flush rewrite rules. Options migrate automatically on activation.
 
 = 1.0.0 =
 Initial release. No upgrade required.
