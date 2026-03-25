@@ -5,7 +5,7 @@
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0)
 [![WordPress](https://img.shields.io/badge/WordPress-5.8%2B-blue)](https://wordpress.org)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple)](https://php.net)
-[![Version](https://img.shields.io/badge/Version-1.0.0-green)](https://github.com/timolumide1/overedge-connector)
+[![Version](https://img.shields.io/badge/Version-1.0.1-green)](https://github.com/timolumide1/overedge-connector)
 
 ---
 
@@ -96,16 +96,16 @@ Once activated, the plugin automatically:
 ```json
 {
   "status": "ok",
-  "plugin_version": "1.0.0",
+  "plugin_version": "1.0.1",
   "wordpress_version": "6.9.4",
   "site_name": "Your Site Name",
   "allowed_origin": "https://yoursite.com",
   "secret_key_set": true,
   "post_types": {
     "posts": 12,
-    "testimonials": 4,
-    "team_members": 3,
-    "faqs": 7
+    "overedge_testimonials": 4,
+    "overedge_team_members": 3,
+    "overedge_faqs": 7
   },
   "rest_api_url": "https://cms.yoursite.com/wp-json/",
   "timestamp": "2026-03-13T01:52:45+00:00"
@@ -122,7 +122,9 @@ https://yourcmsurl.com/?overedge_health=1
 
 ## Custom Post Types
 
-### Testimonials
+Post types are registered as `overedge_testimonials`, `overedge_team_members`, and `overedge_faqs`. REST collection URLs stay short: `GET /wp-json/wp/v2/testimonials`, `.../team_members`, and `.../faqs` via `rest_base`.
+
+### Testimonials (`overedge_testimonials`)
 | Field | Type | Description |
 |-------|------|-------------|
 | `quote` | Textarea | The testimonial quote |
@@ -131,7 +133,7 @@ https://yourcmsurl.com/?overedge_health=1
 | `destination` | Select | germany / usa / both |
 | `avatar` | Image | Author photo (returns URL) |
 
-### Team Members
+### Team Members (`overedge_team_members`)
 | Field | Type | Description |
 |-------|------|-------------|
 | `full_name` | Text | Full name |
@@ -141,7 +143,7 @@ https://yourcmsurl.com/?overedge_health=1
 | `destination_focus` | Select | germany / usa / both |
 | `linkedin_url` | URL | LinkedIn profile URL |
 
-### FAQs
+### FAQs (`overedge_faqs`)
 | Field | Type | Description |
 |-------|------|-------------|
 | `answer` | Textarea | The answer text |
@@ -254,6 +256,13 @@ This plugin works standalone but integrates with the **Overedge platform** at [o
 ---
 
 ## Changelog
+
+### 1.0.1
+- Unique `overco_` prefix for functions, constants, options, and related identifiers (WordPress.org guidelines)
+- Prefixed CPT slugs: `overedge_testimonials`, `overedge_team_members`, `overedge_faqs`
+- Prefixed ACF local field group and field keys
+- REST namespace `overedge/v1`; configure with `X-Overedge-Secret` (legacy `X-Overco-Secret` still accepted)
+- Migrates `overco_*` options to `overedge_*` on activation and removes the old keys
 
 ### 1.0.0
 - Initial release

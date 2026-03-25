@@ -10,29 +10,29 @@ function overedge_register_acf_fields() {
 
     // Testimonials field group
     acf_add_local_field_group( array(
-        'key'      => 'group_testimonials',
+        'key'      => 'group_overedge_testimonials',
         'title'    => 'Testimonial Fields',
         'fields'   => array(
             array(
-                'key'   => 'field_quote',
+                'key'   => 'field_overedge_quote',
                 'label' => 'Quote',
                 'name'  => 'quote',
                 'type'  => 'textarea',
             ),
             array(
-                'key'   => 'field_author_name',
+                'key'   => 'field_overedge_author_name',
                 'label' => 'Author Name',
                 'name'  => 'author_name',
                 'type'  => 'text',
             ),
             array(
-                'key'   => 'field_author_country',
+                'key'   => 'field_overedge_author_country',
                 'label' => 'Author Country',
                 'name'  => 'author_country',
                 'type'  => 'text',
             ),
             array(
-                'key'     => 'field_destination',
+                'key'     => 'field_overedge_destination',
                 'label'   => 'Destination',
                 'name'    => 'destination',
                 'type'    => 'select',
@@ -43,7 +43,7 @@ function overedge_register_acf_fields() {
                 ),
             ),
             array(
-                'key'           => 'field_avatar',
+                'key'           => 'field_overedge_avatar',
                 'label'         => 'Avatar / Photo',
                 'name'          => 'avatar',
                 'type'          => 'image',
@@ -55,7 +55,7 @@ function overedge_register_acf_fields() {
                 array(
                     'param'    => 'post_type',
                     'operator' => '==',
-                    'value'    => 'testimonials',
+                    'value'    => 'overedge_testimonials',
                 ),
             ),
         ),
@@ -64,36 +64,36 @@ function overedge_register_acf_fields() {
 
     // Team Members field group
     acf_add_local_field_group( array(
-        'key'      => 'group_team_members',
+        'key'      => 'group_overedge_team_members',
         'title'    => 'Team Member Fields',
         'fields'   => array(
             array(
-                'key'   => 'field_full_name',
+                'key'   => 'field_overedge_full_name',
                 'label' => 'Full Name',
                 'name'  => 'full_name',
                 'type'  => 'text',
             ),
             array(
-                'key'   => 'field_job_title',
+                'key'   => 'field_overedge_job_title',
                 'label' => 'Job Title',
                 'name'  => 'job_title',
                 'type'  => 'text',
             ),
             array(
-                'key'   => 'field_bio',
+                'key'   => 'field_overedge_bio',
                 'label' => 'Bio',
                 'name'  => 'bio',
                 'type'  => 'textarea',
             ),
             array(
-                'key'           => 'field_photo',
+                'key'           => 'field_overedge_photo',
                 'label'         => 'Photo',
                 'name'          => 'photo',
                 'type'          => 'image',
                 'return_format' => 'url',
             ),
             array(
-                'key'     => 'field_destination_focus',
+                'key'     => 'field_overedge_destination_focus',
                 'label'   => 'Destination Focus',
                 'name'    => 'destination_focus',
                 'type'    => 'select',
@@ -104,7 +104,7 @@ function overedge_register_acf_fields() {
                 ),
             ),
             array(
-                'key'   => 'field_linkedin_url',
+                'key'   => 'field_overedge_linkedin_url',
                 'label' => 'LinkedIn URL',
                 'name'  => 'linkedin_url',
                 'type'  => 'url',
@@ -115,7 +115,7 @@ function overedge_register_acf_fields() {
                 array(
                     'param'    => 'post_type',
                     'operator' => '==',
-                    'value'    => 'team_members',
+                    'value'    => 'overedge_team_members',
                 ),
             ),
         ),
@@ -124,17 +124,17 @@ function overedge_register_acf_fields() {
 
     // FAQs field group
     acf_add_local_field_group( array(
-        'key'      => 'group_faqs',
+        'key'      => 'group_overedge_faqs',
         'title'    => 'FAQ Fields',
         'fields'   => array(
             array(
-                'key'   => 'field_answer',
+                'key'   => 'field_overedge_answer',
                 'label' => 'Answer',
                 'name'  => 'answer',
                 'type'  => 'textarea',
             ),
             array(
-                'key'     => 'field_faq_destination',
+                'key'     => 'field_overedge_faq_destination',
                 'label'   => 'Destination',
                 'name'    => 'destination',
                 'type'    => 'select',
@@ -145,10 +145,10 @@ function overedge_register_acf_fields() {
                 ),
             ),
             array(
-                'key'          => 'field_order',
-                'label'        => 'Order',
-                'name'         => 'order',
-                'type'         => 'number',
+                'key'           => 'field_overedge_order',
+                'label'         => 'Order',
+                'name'          => 'order',
+                'type'          => 'number',
                 'default_value' => 1,
             ),
         ),
@@ -157,7 +157,7 @@ function overedge_register_acf_fields() {
                 array(
                     'param'    => 'post_type',
                     'operator' => '==',
-                    'value'    => 'faqs',
+                    'value'    => 'overedge_faqs',
                 ),
             ),
         ),

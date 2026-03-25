@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function overedge_register_post_types() {
 
     // Testimonials
-    register_post_type( 'testimonials', array(
+    register_post_type( 'overedge_testimonials', array(
         'labels' => array(
             'name'          => __( 'Testimonials', 'overedge-connector' ),
             'singular_name' => __( 'Testimonial', 'overedge-connector' ),
@@ -21,7 +21,7 @@ function overedge_register_post_types() {
     ) );
 
     // Team Members
-    register_post_type( 'team_members', array(
+    register_post_type( 'overedge_team_members', array(
         'labels' => array(
             'name'          => __( 'Team Members', 'overedge-connector' ),
             'singular_name' => __( 'Team Member', 'overedge-connector' ),
@@ -36,7 +36,7 @@ function overedge_register_post_types() {
     ) );
 
     // FAQs
-    register_post_type( 'faqs', array(
+    register_post_type( 'overedge_faqs', array(
         'labels' => array(
             'name'          => __( 'FAQs', 'overedge-connector' ),
             'singular_name' => __( 'FAQ', 'overedge-connector' ),

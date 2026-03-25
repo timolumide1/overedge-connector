@@ -4,7 +4,7 @@ Tags: headless, rest-api, react, lovable, vite
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,15 @@ Connect your WordPress site to any React or Lovable-built frontend as a headless
 **Overedge Connector** is the bridge between your WordPress content and your React frontend.
 
 Whether you built your site with Lovable, Vite, Next.js, or plain React — Overedge Connector turns your WordPress installation into a fully configured headless CMS that your React app can fetch from instantly.
+
+= External Services =
+
+This plugin optionally connects to the Overedge platform (https://overedge.dev) to automate the connection setup between your React frontend and WordPress. This connection is initiated manually by the site administrator and can be used without the platform entirely.
+
+The Overedge platform stores only site URLs and plugin health status. No content or personal data is transmitted.
+
+Privacy policy: https://overedge.dev/privacy
+Terms of service: https://overedge.dev
 
 = What It Does =
 
@@ -66,9 +75,9 @@ This plugin works standalone, but connects seamlessly with the **Overedge platfo
 
 = Custom Post Types Registered =
 
-* `testimonials` — with fields: quote, author_name, author_country, destination, avatar
-* `team_members` — with fields: full_name, job_title, bio, photo, destination_focus, linkedin_url
-* `faqs` — with fields: answer, destination, order
+* `overedge_testimonials` — with fields: quote, author_name, author_country, destination, avatar
+* `overedge_team_members` — with fields: full_name, job_title, bio, photo, destination_focus, linkedin_url
+* `overedge_faqs` — with fields: answer, destination, order
 
 All custom post types are exposed via the WordPress REST API and include ACF field support.
 
@@ -127,7 +136,7 @@ ACF field groups are registered programmatically using `acf_add_local_field_grou
 On activation, the plugin allows all origins by default so your React app can connect during setup. Once you connect via the Overedge platform, the allowed origin is updated to your specific React frontend URL only.
 
 You can also set the allowed origin manually via the configure endpoint:
-`POST /wp-json/overedge/v1/configure` with header `X-Overedge-Secret: [your secret key]`
+`POST /wp-json/overedge/v1/configure` with header `X-Overedge-Secret: [your secret key]` (legacy `X-Overco-Secret` is still accepted)
 
 = Where do I find my Overedge secret key? =
 
@@ -155,6 +164,13 @@ Visit overedge.dev or open an issue at https://github.com/timolumide1/overedge-c
 
 == Changelog ==
 
+= 1.0.1 =
+* Unique `overco_` prefix for functions, constants, options, and related identifiers (WordPress.org guidelines)
+* Prefixed custom post type slugs: `overedge_testimonials`, `overedge_team_members`, `overedge_faqs`
+* Prefixed ACF local field group and field keys
+* REST API namespace `overedge/v1` (configure with `X-Overedge-Secret`)
+* Migrates `overco_*` options to `overedge_*` on activation and removes the old keys
+
 = 1.0.0 =
 * Initial release
 * Custom post types: testimonials, team_members, faqs
@@ -165,6 +181,9 @@ Visit overedge.dev or open an issue at https://github.com/timolumide1/overedge-c
 * Secure configuration endpoint with secret key verification
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+After updating, visit **Settings → Permalinks** and save once. REST collections stay at `wp/v2/testimonials`, `wp/v2/team_members`, and `wp/v2/faqs` (post types are `overedge_testimonials`, `overedge_team_members`, `overedge_faqs` internally). Options and secret keys migrate automatically on activation.
 
 = 1.0.0 =
 Initial release. No upgrade required.
